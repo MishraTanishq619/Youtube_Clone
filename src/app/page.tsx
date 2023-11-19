@@ -7,16 +7,26 @@ import React, { useState } from "react";
 
 const page = () => {
 	const [SelectedCategory, setSelectedCategory] = useState("");
+	const [VideoList, setVideoList] = useState([]);
+
 	return (
 		<div>
-			<Navbar />
+			<Navbar
+				VideoList={VideoList}
+				setVideoList={setVideoList}
+				setSelectedCategory={setSelectedCategory}
+			/>
 			<hr className="mt-4" />
 			<div className="flex">
 				<Sidebar
 					SelectedCategory={SelectedCategory}
 					setSelectedCategory={setSelectedCategory}
 				/>
-				<Main SelectedCategory={SelectedCategory} />
+				<Main
+					SelectedCategory={SelectedCategory}
+					VideoList={VideoList}
+					setVideoList={setVideoList}
+				/>
 			</div>
 		</div>
 	);
