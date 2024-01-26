@@ -43,11 +43,12 @@ const Sidebar = ({ SelectedCategory, setSelectedCategory }) => {
 			{youtubeCategories.map((e, k) => {
 				return (
 					<button
+						key={k}
 						className="category-btn"
 						onClick={() => setSelectedCategory(e.name)}
 						style={{
 							backgroundColor:
-								e.name === SelectedCategory && "red",
+								e.name === SelectedCategory ? "red" : "",
 						}}
 					>
 						{e.icon}

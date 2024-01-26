@@ -22,7 +22,14 @@ const Navbar = ({ VideoList, setVideoList, setSelectedCategory }) => {
 	return (
 		<div className="flex mt-4 ml-8 gap3">
 			<MenuIcon fontSize="large" />
-			<Link href={`/`} onClick={window.location.reload}>
+			<Link
+				href={`/`}
+				onClick={() => {
+					if (window !== undefined) {
+						window?.location.reload();
+					}
+				}}
+			>
 				<div className="flex">
 					<YouTubeIcon fontSize="large" />
 					<h1 className="text-3xl">YouTube</h1>

@@ -2,7 +2,7 @@ import React, { Key, useEffect } from "react";
 import VideoCard from "@/components/VideoCard";
 import ChannelCard from "@/components/ChannelCard";
 
-const Videos = ({ VideoList }: Object) => {
+const Videos = ({ VideoList }: any) => {
 	// console.log(VideoList);
 	return (
 		<div className="flex flex-wrap items-center justify-evenly">

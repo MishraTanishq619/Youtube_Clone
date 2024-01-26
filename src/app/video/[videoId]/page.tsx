@@ -2,6 +2,7 @@
 import Navbar from "@/components/Navbar";
 import SideSimilarVideos from "@/components/SideSimilarVideos";
 import ApiFetcher from "@/utils/ApiFetcher";
+import { title } from "process";
 import React, { useEffect, useState } from "react";
 import ReactPlayer from "react-player";
 
@@ -9,7 +10,7 @@ const page = ({ params }) => {
 	console.log(params);
 	const [SelectedCategory, setSelectedCategory] = useState("");
 	const [VideoList, setVideoList] = useState([]);
-	const [VideoDetails, setVideoDetails] = useState({});
+	const [VideoDetails, setVideoDetails] = useState({ snippet: { title } });
 	useEffect(() => {
 		ApiFetcher(`videos?part=snippet&id=${params.videoId}`).then((ob) =>
 			setVideoDetails(ob.items[0])

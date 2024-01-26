@@ -10,22 +10,18 @@ import ChannelPageCard from "@/components/ChannelPageCard";
 const page = ({ params }) => {
 	const [SelectedCategory, setSelectedCategory] = useState("");
 	const [VideoList, setVideoList] = useState([]);
-	const [ChannelDetails, setChannelDetails] = useState({});
+	const [ChannelDetails, setChannelDetails] = useState({ snippet: null });
 	useEffect(() => {
-		ApiFetcher(`search?part=snippet&channelId=${params.channelId}`)
-			.then((ob) => {
+		ApiFetcher(`search?part=snippet&channelId=${params.channelId}`).then(
+			(ob) => {
 				setVideoList(ob.items);
 				// console.log(VideoList);
-			})
-			.then(() => {
-				console.log("This is list ", VideoList);
-			});
+			}
+		);
 
-		ApiFetcher(`channels?part=snippet&id=${params.channelId}`)
-			.then((ob) => setChannelDetails(ob.items[0]))
-			.then(() => {
-				console.log(ChannelDetails);
-			});
+		ApiFetcher(`channels?part=snippet&id=${params.channelId}`).then((ob) =>
+			setChannelDetails(ob.items[0])
+		);
 	}, [SelectedCategory]);
 	{
 		ChannelDetails
