@@ -11,7 +11,7 @@ const Main = ({ SelectedCategory, VideoList, setVideoList }) => {
 	}, [SelectedCategory]);
 
 	return (
-		<div>
+		<div className="w-5/6 absolute h-full overflow-y-scroll mr-6 left-60">
 			<h1 className="m-4 text-3xl">
 				{SelectedCategory} <span className="text-red-500">Videos</span>
 			</h1>

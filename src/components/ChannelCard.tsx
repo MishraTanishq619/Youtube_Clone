@@ -19,7 +19,7 @@ const ChannelCard = ({ e, k }) => {
 					alt="image"
 				/>
 
-				<h3 className="font-bold text-xl mt-[-20px]">
+				<h3 className="text-xl font-bold text-center mt-[-20px]">
 					{e.snippet.channelTitle && e.snippet.channelTitle}
 				</h3>
 			</Link>

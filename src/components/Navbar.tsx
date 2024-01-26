@@ -5,6 +5,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import ApiFetcher from "@/utils/ApiFetcher";
+import Link from "next/link";
 
 const Navbar = ({ VideoList, setVideoList, setSelectedCategory }) => {
 	const [SearchText, setSearchText] = useState("");
@@ -21,10 +22,12 @@ const Navbar = ({ VideoList, setVideoList, setSelectedCategory }) => {
 	return (
 		<div className="flex mt-4 ml-8 gap3">
 			<MenuIcon fontSize="large" />
-			<div className="flex">
-				<YouTubeIcon fontSize="large" />
-				<h1 className="text-3xl">YouTube</h1>
-			</div>
+			<Link href={`/`} onClick={window.location.reload}>
+				<div className="flex">
+					<YouTubeIcon fontSize="large" />
+					<h1 className="text-3xl">YouTube</h1>
+				</div>
+			</Link>
 			<form className="bgclr  flex  h-10 w-[40vw]" onSubmit={Search}>
 				<input
 					type="search"

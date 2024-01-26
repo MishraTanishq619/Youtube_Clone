@@ -36,7 +36,9 @@ const Sidebar = ({ SelectedCategory, setSelectedCategory }) => {
 			justifyContent="flex-start"
 			alignItems="flex-start"
 			spacing={2}
-			className="w-[15rem] h-full border-r-2"
+			width={"200px"}
+			// height={"700px"}
+			className=" border-r-2"
 		>
 			{youtubeCategories.map((e, k) => {
 				return (

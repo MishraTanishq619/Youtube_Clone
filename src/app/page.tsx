@@ -17,11 +17,12 @@ const page = () => {
 				setSelectedCategory={setSelectedCategory}
 			/>
 			<hr className="mt-4" />
-			<div className="flex">
+			<div className="flex overflow-y-scroll">
 				<Sidebar
 					SelectedCategory={SelectedCategory}
 					setSelectedCategory={setSelectedCategory}
 				/>
+
 				<Main
 					SelectedCategory={SelectedCategory}
 					VideoList={VideoList}

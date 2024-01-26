@@ -2,6 +2,7 @@ import Link from "next/link";
 import React, { Key } from "react";
 
 const VideoCard = ({ e, k }) => {
+	// console.log(e);
 	return (
 		<div key={k} id="VideoCard" className="h-80 w-72 bg-[#312f2f] my-4">
 			<Link href={`/video/${e.id.videoId}`}>
@@ -9,10 +10,10 @@ const VideoCard = ({ e, k }) => {
 					className="object-contain p-2"
 					src={
 						e.snippet.thumbnails
-							? e.snippet.thumbnails.high.url
+							? e.snippet.thumbnails.high?.url
 							: "#"
 					}
-					alt="image"
+					alt="ImageError"
 				/>
 				<div className="">
 					<h2 className="font-bold px-2">

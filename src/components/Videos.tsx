@@ -3,7 +3,7 @@ import VideoCard from "@/components/VideoCard";
 import ChannelCard from "@/components/ChannelCard";
 
 const Videos = ({ VideoList }: Object) => {
-	console.log(VideoList);
+	// console.log(VideoList);
 	return (
 		<div className="flex flex-wrap items-center justify-evenly">
 			{VideoList.map((e: any, k: Key) => {
