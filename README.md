@@ -1,6 +1,8 @@
-# ICSPE_2024
+# Youtube Clone
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+Made using: Nextjs, TailwindCss, Typescript
 
 Steps to run:
 
